@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require("../../config/connection");
 const { Post, User, Comment } = require("../../models");
 
-// 
+// route for posts api 
 router.get("/", (req, res) => {
   Post.findAll({
     attributes: ["id", "title", "post_url", "created_at"],
@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
   })
 });
 
-// 
+// route to view posts api with id
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -57,6 +57,66 @@ router.get('/:id', (req, res) => {
   })
 });
 
-// findOne, Update, Delete, Create
+// route for posts api to create a post 
+router.post('/', (req, res) => {
+  Post.create({
+    title: req.body.title,
+    post_url: req.body.post_url,
+    user_id: req.body.user_id
+  })
+  .then(dbPostData => res.json(dbPostData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+// route for posts api to edit a post (title and post_url)
+router.put('/:id', (req, res) => {
+  Post.update(
+    {
+      title: req.body.title,
+      post_url: req.body.post_url
+    },
+    {
+      where: {
+        id: req.params.id
+      },
+    }
+  )
+  .then(dbPostData => {
+    if (!dbPostData) {
+      res.status(404).json({ message: 'no post found' });
+      return;
+    }  else {
+      res.json(dbPostData);
+    }
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+// route for posts api delete a post by post id
+router.delete('/:id', (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbPostData => {
+    if(!dbPostData) {
+      res.status(404).json({ message: 'No post found'});
+      return;
+    } else {
+      res.json(dbPostData);
+    }
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
 
 module.exports = router;
