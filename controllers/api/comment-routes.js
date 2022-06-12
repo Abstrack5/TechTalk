@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Post,
-                attributes: ["id", "post_url", "title", "created_at"]
+                attributes: ["id", "post_content", "title", "created_at"]
             }
         ]
     })
