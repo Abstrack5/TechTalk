@@ -1,5 +1,5 @@
 {
-  "name": "techorama",
+  "name": "techtalk",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,9 +16,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Abstrack5/TechoRama/issues"
+    "url": "https://github.com/Abstrack5/TechTalk/issues"
   },
-  "homepage": "https://github.com/Abstrack5/TechoRama#readme",
+  "homepage": "https://github.com/Abstrack5/TechTalk#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
