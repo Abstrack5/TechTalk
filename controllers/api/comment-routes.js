@@ -4,18 +4,7 @@ const { User, Post, Comment } = require("../../models");
 
 // route to see comment api information
 router.get('/', (req, res) => {
-    Comment.findAll({
-        include: [
-            {
-                model: User,
-                attributes: ["username"]
-            },
-            {
-                model: Post,
-                attributes: ["id", "post_content", "title", "created_at"]
-            }
-        ]
-    })
+    Comment.findAll()
     .then(dbCommentData => res.json(dbCommentData))
     .catch(err => {
         console.error(err);
@@ -25,16 +14,19 @@ router.get('/', (req, res) => {
 
 // route to create new comment (req "comment_text", "user_id", "post_id")
 router.post('/', (req, res) => {
+    if(req.session) {
     Comment.create({
         comment_text: req.body.comment_text,
-        user_id: req.body.user_id,
-        post_id: req.body.post_id
+        // user_id: req.body.user_id,
+        post_id: req.body.post_id,
+        user_id: req.session.user_id
     })
     .then(dbCommentData => res.json(dbCommentData))
     .catch(err => {
         console.error(err);
         res.status(500).json(err);
     })
+  }
 });
 
 // router to delete a specific comment using id of comment
