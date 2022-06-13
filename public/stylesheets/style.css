@@ -41,7 +41,7 @@ ol {
 .title {
     display: flex;
     justify-content: space-between;
-    border: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
 .post {

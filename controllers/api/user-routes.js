@@ -5,9 +5,9 @@ const { User, Post, Comment } = require("../../models");
 // /api/users get all users
 router.get("/", (req, res) => {
   User.findAll({
-    attributes: {
-      exclude: ["password"],
-    },
+    // attributes: {
+    //   exclude: ["password"],
+    // },
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch(err => {
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
   User.findOne({
       where: {
-        email: req.body.email
+        username: req.body.username
       }
   })
   .then(dbUserData => {
