@@ -62,11 +62,15 @@ router.post('/', (req, res) => {
       password: req.body.password
     }
   )
-  .then(dbUserData => res.json(dbUserData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+  .then(dbUserData => {
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.user_name = dbUserData.name;
+      req.session.loggedIn = true;
+
+      res.json(dbUserData);
+    });
+  });
 });
 
 // route for users logging in, post is a more secure HTTP 
@@ -88,13 +92,27 @@ router.post('/login', (req, res) => {
       res.status(404).json({ message: 'Incorrect password' });
       return;
     }
-    res.json({ message: 'Sucessfully logged in!'});
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: 'Sucessfully logged in!'});
+    })
   });
 });
 
 // route for users logging out
-// router.post('/logout', (req, res) => {
-// })
+router.post('/logout', (req, res) => {
+  if(req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(403).end();
+  }
+})
 
 // route for users updating password
 router.put('/:id', (req, res) => {
