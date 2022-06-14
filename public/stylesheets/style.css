@@ -23,6 +23,22 @@ header {
   padding: 0 1%;
 }
 
+h1 span {
+  color: #999797;
+}
+
+h1 span:hover {
+  color: #0e506e;
+}
+
+h1 a:hover {
+  color: #0e506e;
+}
+
+nav a button {
+  color: red;
+}
+
 a {
   text-decoration: none;
   color: #0e506e;
@@ -30,7 +46,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #c5bfbf;
+  color: #999797;
 }
 
 .btn-no-style {
@@ -60,12 +76,14 @@ a:hover {
 
 .post-title{
   background-color: #52b0cc7e;
+  margin: 10px;
   padding: 10px;
   margin-top: 0;
   text-align: left;
 }
 
 .post-content{
+  margin: 10px;
   padding: 10px;
   text-align: left;
 }

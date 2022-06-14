@@ -3,19 +3,32 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-post">
     <div>
-        <label for="edit-title" class="form-label">Title</label>
-        <input name="edit-title" type="text" value="{{post.title}}" class="form-input form-control"/>
+      <label for="update-title" class="form-label">Title</label>
+      <input
+        name="update-title"
+        type="text"
+        value="{{post.title}}"
+        class="form-input form-control"
+      />
     </div>
     <div>
-        <label for="edit-content" class="form-label">Content</label>
-        <input name="edit-content" type="text" value="{{post.post_content}}" class="form-input form-control"/>
+      <label for="content" class="form-label">Content</label>
+      <input
+        name="content"
+        class="form-input form-control"
+        type="text"
+        value="{{post.post_content}}"
+      />
     </div>
-    <button type="submit">Update post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <div class="my-3">
+    <button type="submit" class="btn btn-success">Update post</button>
+    <button type="button" class="btn delete-post-btn btn-danger">Delete post</button>
+    </div>
   </form>
 </article>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
