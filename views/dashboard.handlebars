@@ -9,9 +9,13 @@
   <ol>
     {{#each posts as |post|}}
     <div class="post">
-
-      {{> post-info post}}<a href="/dashboard/edit/{{post.id}}" class="edit-link post-author">Edit post</a>
-      
+      <div class="text-end">
+      <a href="/dashboard/edit/{{post.id}}" class="post-author">Edit post</a>
+      </div>
+      {{> post-info post}}
+      {{!-- <div class="text-end">
+      <a href="/dashboard/edit/{{post.id}}" class="post-author">Edit post</a>
+      </div> --}}
     </div>
     {{/each}}
   </ol>

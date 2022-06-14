@@ -1,10 +1,11 @@
-<div class="row">
+<article class="row">
     <div class="card-header">
        <h4 class="card-title post-title"><a class="link" href="/post/{{id}}">{{title}}</a></h4>
-        <div class="card-body post-body">
+        <div class="card-body ">
         <p class="card-body post-content">{{post_content}}</p>
-        <p class="card-text post-author">posted by <span class="post-username">{{user.username}}</span> on {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</p>
+        <p class="card-text post-author">posted by <span class="post-username">{{user.username}}</span> on {{format_date created_at}} |  <a href="/post/{{id}}">{{comments.length}} {{format_plural 'comment' comments.length}}</a></p>
         </div>
+        
     </div>
-</div>
+</article>
 

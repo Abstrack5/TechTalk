@@ -49,6 +49,11 @@ a:hover {
   color: #999797;
 }
 
+#update-btn:hover {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
 .btn-no-style {
   background: none;
   border: none;
@@ -66,36 +71,36 @@ a:hover {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
-      flex-direction: column;
+  flex-direction: column;
 }
 
-.post{
-  margin: 20px 0;
+.post {
+  margin: 20px 30px;
   border: 1px solid;
 }
 
-.post-title{
-  background-color: #52b0cc7e;
-  margin: 10px;
+.post-title {
+  background-color: #6e89a1a6;
+  margin: 10px 12px;
   padding: 10px;
   margin-top: 0;
   text-align: left;
 }
 
-.post-content{
-  margin: 10px;
-  padding: 10px;
+.post-content {
+  margin: 15px 20px;
+  padding: 10px 30px;
   text-align: left;
 }
 
-.post-author{
+.post-author {
   text-align: right;
   margin-right: 20px;
   margin-bottom: 20px;
   font-style: italic;
 }
 
-.post-username{
+.post-username {
   font-weight: bold;
 }
 

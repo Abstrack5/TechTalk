@@ -1,29 +1,28 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
+<article class="my-3">
+  <a href="/dashboard" class=""> <p>&#8678; Back to dashboard</p></a>
+  <h2 class="mt-4">
     Edit Post
   </h2>
   <form class="edit-post">
-    <div>
+    <div class="col-7">
       <label for="update-title" class="form-label">Title</label>
-      <input
+      <input 
         name="update-title"
         type="text"
         value="{{post.title}}"
         class="form-input form-control"
       />
     </div>
-    <div>
+    <div class="col-7 mt-2">
       <label for="content" class="form-label">Content</label>
       <input
         name="content"
         class="form-input form-control"
         type="text"
-        value="{{post.post_content}}"
-      />
+        value="{{post.post_content}}"/>
     </div>
     <div class="my-3">
-    <button type="submit" class="btn btn-success">Update post</button>
+    <button type="submit" id="update-btn" class="btn btn-primary">Update post</button>
     <button type="button" class="btn delete-post-btn btn-danger">Delete post</button>
     </div>
   </form>
