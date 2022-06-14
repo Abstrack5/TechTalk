@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-ol {
-  list-style: none;
-}
-
 body,
 html {
   height: 100%;
@@ -30,8 +26,33 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #c5bfbf;
+  color: #0e506e;
 }
+/* span {
+  font-style: italic;
+  font-size: 80%;
+  color: #ef6f6c;
+} */
+
+ol {
+  list-style: none;
+}
+
+/* .post .title {
+  font-style: italic;
+  font-size: 90%;
+  color: #ef6f6c;
+}
+
+.title {
+  border-bottom: 1px solid #333;
+}
+
+.post {
+  margin-bottom: 1rem;
+  list-style: 150%;
+  border: 1px solid #333;
+} */
 
 .btn-no-style {
   background: none;
@@ -45,40 +66,12 @@ a:hover {
 }
 
 .wrapper {
-  width: 70%;
+  width: 80%;
   min-height: 100%;
-  max-width: 100%;
+  /* max-width: ; */
   margin: 0 auto;
-  display: flex;
-      flex-direction: column;
-}
-
-.post{
-  margin: 20px 0;
-  border: 1px solid;
-}
-
-.post-title{
-  background-color: #52b0cc7e;
-  padding: 10px;
-  margin-top: 0;
-  text-align: left;
-}
-
-.post-content{
-  padding: 10px;
-  text-align: left;
-}
-
-.post-author{
-  text-align: right;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.post-username{
-  font-weight: bold;
+  /* display: flex;
+    flex-direction: column; */
 }
 
 footer {

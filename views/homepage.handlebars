@@ -1,3 +1,5 @@
-<ol class="post-container">
-   {{> post-info}}
-</ol>
+{{#each posts as |post| }}
+<article class="post">
+    {{> post-info post}}
+</article>
+{{/each}}

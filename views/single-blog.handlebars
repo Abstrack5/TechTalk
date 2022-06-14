@@ -1,41 +1,25 @@
-<article class="post">
-    <div class="title">
-        <h2>{{post.title}}</h2>
-    </div>
-    <div>
-        {{post.post_content}}
-    </div>
-    <div class="">
-        by {{post.user.username}} | {{post.created_at}} |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-    </div>
-</article>
+<div class="my-5">
+{{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+  <form class="comment-form">
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+        name="comment-body"
+      ></textarea>
     </div>
 
-    <div>
-        <button type="submit">Add comment</button>
+    <div class="m-2">
+      <button type="submit" class="btn btn-primary">Add comment</button>
     </div>
-</form>
+  </form>
 {{/if}}
 
-<div>
-    {{#each post.comments}}
-    <section>
-        <div>
-            {{user.username}} on {{created_at}}
-        </div>
-        <div>
-            {{comment_text}}
-        </div>
-    </section>
-    {{/each}}
+{{> comments post.comments}}
 </div>
-
 {{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
+  <script src="/javascript/comment.js"></script>
 {{/if}}

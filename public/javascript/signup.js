@@ -6,7 +6,7 @@ async function signup (event) {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && email && password) {
-        const response = await fetch('/api/users/', {
+        const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -18,6 +18,7 @@ async function signup (event) {
 
         if (response.ok) {
             console.log("Success!");
+            document.location.replace('/dashboard');
         } else {
             alert("Error: Inappropriate input values. Email must be valid, and password requires length of 4 or more characters");
         }

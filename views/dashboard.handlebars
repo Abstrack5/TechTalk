@@ -1,3 +1,21 @@
-{{#each posts}}
-<h1> Hello {{user.username}} </h1>
-{{/each}}
+<section class="my-5">
+  <h2 class="title">Create New Post</h2>
+  <button type="submit" class="btn new-post-button"><a class="link" href="/dashboard/create">+ New Post</a></button>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <div class="post">
+
+      {{> post-info post}}<a href="/dashboard/edit/{{post.id}}" class="edit-link post-author">Edit post</a>
+      
+    </div>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/create-post.js"></script>

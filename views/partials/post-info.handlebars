@@ -1,16 +1,9 @@
-  {{#each posts}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="/post/{{id}}" class="title"><h2>{{title}}</h2></a>
-      </div>
-      <div>
-        {{post_content}}
-        <div class="">
-            by {{user.username}} | {{created_at}} |
-            <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+<div class="container row">
+    <div class="card-header dashboard-post">
+       <h4 class="card-title post-title"><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+        <div class="card-body post-body">
+        <p class="card-body post-content">{{post_content}}</p>
+        <p class="card-text post-author">posted by <span class="post-username">{{user.username}}</span> on {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</p>
         </div>
-      </div>
-    </article>
-  </li>
-  {{/each}}
+    </div>
+</div>

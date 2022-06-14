@@ -12,6 +12,14 @@ router.get('/', (req, res) => {
             model: User,
             attributes: ["username"],
           },
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        }
         ],
       })
         .then((dbPostData) => {
@@ -33,6 +41,10 @@ router.get('/login', (req, res) => {
     return;
   }
     res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 router.get('/post/:id', (req, res) => {

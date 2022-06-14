@@ -1,0 +1,14 @@
+<div class="container row">
+  {{#each this}}
+    <section class="card my-2">
+      <div class="card-body text-left">
+        {{comment_text}}
+      </div>
+      <div class="post-author">
+        {{user.username}}
+        on
+        {{format_date created_at}}
+      </div>
+    </section>
+  {{/each}}
+</div>
