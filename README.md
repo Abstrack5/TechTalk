@@ -1,12 +1,10 @@
 # TechTalk
 a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
-```
-View demo [_here_](https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view)
-```
-https://watch.screencastify.com/v/ufii5osNtwwfLlF9Ns3M
-https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view
 
+View demo [_here_](https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view)
+
+https://watch.screencastify.com/v/ufii5osNtwwfLlF9Ns3M
 
 ## Technologies
 * Javascript
@@ -16,6 +14,7 @@ https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view
 * Handlebarsjs
 
 ## Usage
+````
  - npm install
  - add .env file
  - add DB_NAME = (database name here)
@@ -26,7 +25,7 @@ https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view
  - run source db/schema.sql
  - exit mysql
  - run npm start
- - 
+ ````
 
 ## Preview 
 ![screenshot1](https://user-images.githubusercontent.com/100798134/173698497-ff5faf1d-6035-4be2-866f-bad30efcc4bb.jpg)
