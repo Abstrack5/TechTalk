@@ -2,7 +2,7 @@ async function editFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="update-title"]').value;
-  const post_content = document.querySelector('textarea[name="content"]').value;
+  const post_content = document.querySelector('input[name="content"]').value;
   console.log(title);
   console.log(post_content);
 
@@ -29,5 +29,5 @@ async function editFormHandler(event) {
 }
 
 document
-  .querySelector(".edit-post")
+  .querySelector(".edit-post-form")
   .addEventListener("submit", editFormHandler);
