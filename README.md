@@ -1,8 +1,11 @@
 # TechTalk
 a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
-
+## Preview 
 View demo [_here_](https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view)
+
+![screenshot1](https://user-images.githubusercontent.com/100798134/173698497-ff5faf1d-6035-4be2-866f-bad30efcc4bb.jpg)
+![screenshot2](https://user-images.githubusercontent.com/100798134/173698513-8a119eb4-5d87-4e13-96e5-b89598cbbcc2.jpg)
 
 https://watch.screencastify.com/v/ufii5osNtwwfLlF9Ns3M
 
@@ -27,9 +30,7 @@ https://watch.screencastify.com/v/ufii5osNtwwfLlF9Ns3M
  - run npm start
  ````
 
-## Preview 
-![screenshot1](https://user-images.githubusercontent.com/100798134/173698497-ff5faf1d-6035-4be2-866f-bad30efcc4bb.jpg)
-![screenshot2](https://user-images.githubusercontent.com/100798134/173698513-8a119eb4-5d87-4e13-96e5-b89598cbbcc2.jpg)
+
 
 
 ##  Copyright ![Github](https://img.shields.io/github/license/abstrack5/ispy)
