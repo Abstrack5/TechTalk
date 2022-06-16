@@ -1,5 +1,5 @@
 # TechTalk
-a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
 ## Preview 
 View demo [_here_](https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view)
