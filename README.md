@@ -3,7 +3,7 @@ a CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## Preview 
 View demo [_here_](https://drive.google.com/file/d/1g5_SEu2B-PQLBvMPcvbcnXMKlqjKHZNX/view)
-* https://shrouded-garden-94826.herokuapp.com/
+View website deloyed on Heroku [ here ](https://shrouded-garden-94826.herokuapp.com/)
 
 ![screenshot1](https://user-images.githubusercontent.com/100798134/173698497-ff5faf1d-6035-4be2-866f-bad30efcc4bb.jpg)
 ![screenshot2](https://user-images.githubusercontent.com/100798134/173698513-8a119eb4-5d87-4e13-96e5-b89598cbbcc2.jpg)
